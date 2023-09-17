@@ -9,4 +9,4 @@ If you use the code or data, please cite the following paper:
   *Arts S, Melluso N, Veugelers R (2023). Beyond citations: Text-based metrics for assessing novelty and its reuse in scientific publications.*
 
 
-![https://github.com/nicolamelluso/science-novelty/blob/main/ScienceNovelty-schema.png]
+![Science Novelty Schema](https://github.com/nicolamelluso/science-novelty/blob/main/ScienceNovelty-schema.png)
