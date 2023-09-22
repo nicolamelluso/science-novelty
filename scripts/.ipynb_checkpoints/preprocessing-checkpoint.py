@@ -8,7 +8,7 @@ import pandas as pd
 
 print('Reading stopwords...')
 stopwords = []
-with open('../data/stopwords.csv','r', encoding = 'utf-8') as file:
+with open('./data/stopwords.csv','r', encoding = 'utf-8') as file:
     for line in file:
         stopwords.append(line.replace('\n',''))
         
@@ -17,10 +17,6 @@ stopwords = set(stopwords)
 import string
 punctuation = string.punctuation.replace('-','')
 
-# Method to tokenize and remove stopwords from the text
-def tokenize(text):
-    text = re.findall(r'[a-z0-9][a-z0-9-]*[a-z0-9]+|[a-z0-9]', text.lower())
-    return text
 
 import nltk
 nltk.download('wordnet')
@@ -28,64 +24,28 @@ from nltk.stem import WordNetLemmatizer
 
 lemmatizer = WordNetLemmatizer()
 
+def tokenize(text):
+    return re.findall(r'[a-z0-9][a-z0-9-]*[a-z0-9]+|[a-z0-9]', text.lower())
+
 def lemmatize(text):
-    
-    lemmatized = [lemmatizer.lemmatize(word) for word in text]
-    
-    return lemmatized
-
-def plain_text_from_inverted(inverted_index):
-    
-    if inverted_index is None:
-        return None
-
-    positions = []
-    for word, indices in inverted_index.items():
-        for index in indices:
-            positions.append((index, word))
-
-    positions.sort()
-
-    return ' '.join([word for index, word in positions])
-
+    return [lemmatizer.lemmatize(word) for word in text]
 
 def get_removal_words(unigrams):
+    return set([w for w in unigrams if (
+        not w.isascii() or
+        len(w) == 1 or
+        w in punctuation or
+        w.isdigit() or
+        w.startswith(('-', *punctuation)) or
+        w.endswith(('-', *punctuation))
+    )] + list(stopwords))
 
-    return set([w for w in unigrams if ((not w.isascii()) |
-                                            (len(w) == 1) |
-                                            (w in punctuation) |
-                                            (w.isdigit())) |
-                                            (w.startswith(punctuation) |
-                                            (w.startswith('-')) |
-                                            (w.endswith(punctuation)) |
-                                            (w.endswith('-')))] + list(stopwords))
-
-def get_unigrams(text, processed = True):
-    
+def process_text(text):
     unigrams = lemmatize(tokenize(text))
+    removal_words = get_removal_words(unigrams)
     
-    if processed != True:
-        return unigrams
-    else:
-        return [w for w in unigrams if w not in get_removal_words(unigrams)]
-
-def get_bigrams(unigrams, removal_words = None):
+    processed_unigrams = [w for w in unigrams if w not in removal_words]
+    bigrams = ['_'.join(bigram) for bigram in ngrams(unigrams, 2) if not (bigram[0] in removal_words or bigram[1] in removal_words)]
+    trigrams = ['_'.join(trigram) for trigram in ngrams(unigrams, 3) if not (trigram[0] in removal_words or trigram[-1] in removal_words)]
     
-    if removal_words is None:
-        removal_words = get_removal_words(unigrams)
-    
-    bigrams = list(ngrams(unigrams, 2))
-        
-    # Remove bigrams that contain at least one stopword
-    return ['_'.join(bigram) for bigram in bigrams if not ((bigram[0] in removal_words) | (bigram[1] in removal_words))]
-
-def get_trigrams(unigrams, removal_words = None):
-    
-    if removal_words is None:
-        removal_words = get_removal_words(unigrams)
-    
-    trigrams = list(ngrams(unigrams, 3))
-        
-    # Remove trigrams that start or end with one stopword
-    return ['_'.join(trigram) for trigram in trigrams if not ((trigram[0] in removal_words) | (trigram[-1] in removal_words))]
-
+    return processed_unigrams, bigrams, trigrams
