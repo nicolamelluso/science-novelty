@@ -1,4 +1,4 @@
-# Measuring Novelty in Science using Natural Language Processing
+# Measuring Novelty and Impact in Science using Natural Language Processing
 
 
 This code performs data processing and novelty measure for all papers from Microsoft Academic Graph (MAG) (now OpenAlex).
