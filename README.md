@@ -10,3 +10,8 @@ If you use the code or data, please cite the following paper:
 
 
 ![Science Novelty Schema](https://github.com/nicolamelluso/science-novelty/blob/main/ScienceNovelty-schema.png)
+
+# Contribution & Feedback
+We welcome contributions to improve the code and its functionality. If you have any issues or feature requests, or if you'd like to provide feedback, please feel free to reach out.
+
+Respect copyrights. Issues or features? Email us at nicola.melluso@kuleuven.be.

@@ -8,7 +8,7 @@ import pandas as pd
 
 print('Reading stopwords...')
 stopwords = []
-with open('./data/stopwords.csv','r', encoding = 'utf-8') as file:
+with open('../data/stopwords.csv','r', encoding = 'utf-8') as file:
     for line in file:
         stopwords.append(line.replace('\n',''))
         
@@ -49,3 +49,18 @@ def process_text(text):
     trigrams = ['_'.join(trigram) for trigram in ngrams(unigrams, 3) if not (trigram[0] in removal_words or trigram[-1] in removal_words)]
     
     return processed_unigrams, bigrams, trigrams
+
+
+def plain_text_from_inverted(inverted_index):
+    
+    if inverted_index is None:
+        return None
+
+    positions = []
+    for word, indices in inverted_index.items():
+        for index in indices:
+            positions.append((index, word))
+
+    positions.sort()
+
+    return ' '.join([word for index, word in positions])
