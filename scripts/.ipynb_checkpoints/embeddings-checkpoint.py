@@ -22,16 +22,21 @@ def load_model(model_name = 'specter'):
     return tokenizer, model
 
 def get_embedding(text, tokenizer, model, max_length=512):
-    # Encode the text with a specified max_length
+    # Tokenize the text
     inputs = tokenizer(text, padding='max_length', truncation=True, max_length=max_length, return_tensors='pt')
-
-    # Compute the embedding
-    with torch.no_grad():
-        embedding = model(**inputs)['pooler_output']
-
-    # Convert the tensor to a numpy array and then flatten it to get a single vector
-    embedding = embedding.numpy().flatten()
     
-    return embedding
+    # Move the tokenized input to the GPU if available
+    if torch.cuda.is_available():
+        for key, value in inputs.items():
+            inputs[key] = value.to('cuda')
+    
+    # Get the embeddings
+    with torch.no_grad():
+        outputs = model(**inputs)
+        embeddings = outputs.last_hidden_state.mean(dim=1).squeeze().detach()
+    
+    # Move the embeddings to CPU for further operations
+    embeddings = embeddings.cpu().numpy()
+
 
 
