@@ -1,12 +1,16 @@
 # Ignore .log files
 *.log
-*.ipynb_checkpoints
+*/.ipynb_checkpoints
 
 # Ignore the bin directory
+/.ipynb_checkpoints
 /data/metrics/new_bigram.csv
 /data/metrics/papers_cosine.csv
 /data/ipynb_checkpoints
 /data/vectors/.ipynb_checkpoints
+/notebooks/.ipynb_checkpoints
+/science_novelty/.ipynb_checkpoints
+/science_novelty/__pycache__
 
 # Ignore all .md files except README.md
 *.md
