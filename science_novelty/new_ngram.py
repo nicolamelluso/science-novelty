@@ -13,7 +13,7 @@ def calculate_new_ngrams(baseline_year: int, raw_papers_path: str, processed_pap
     - processed_papers_path: The path to the processed papers data CSV file.
     
     Returns:
-    - A function that calculates and returns new words and their counts.
+    - A function that calculates and returns new ngrams and their counts.
     """
     
     # Create a baseline set of words from papers published before the baseline year
@@ -41,8 +41,8 @@ def calculate_new_ngrams(baseline_year: int, raw_papers_path: str, processed_pap
         Calculate new ngrams (words, bigrams or trigrams) that are not in the baseline.
         
         Returns:
-        - A dictionary where keys are new words, and values are tuples containing the paper ID where the word first appeared
-          and the number of times the word has been reused in other papers.
+        - A dictionary where keys are new ngrams, and values are tuples containing the paper ID where the word first appeared
+          and the number of times the ngram has been reused in other papers.
         """
         counter = collections.Counter()
         paperIds = collections.defaultdict(int)
@@ -65,7 +65,7 @@ def calculate_new_ngrams(baseline_year: int, raw_papers_path: str, processed_pap
                     else:
                         counter[token] += 1
         
-        # Prepare the final result, filtering out words that were only used once
+        # Prepare the final result, filtering out ngrams that were only used once
         result = {token: (paperIds[token], count) for token, count in counter.items() if count > 0}
         return result
     
