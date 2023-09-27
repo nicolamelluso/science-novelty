@@ -5,6 +5,8 @@
 # Ignore the bin directory
 /data/metrics/new_bigram.csv
 /data/metrics/papers_cosine.csv
+/data/ipynb_checkpoints
+/data/vectors/.ipynb_checkpoints
 
 # Ignore all .md files except README.md
 *.md
