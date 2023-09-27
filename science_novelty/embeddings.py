@@ -27,8 +27,7 @@ def get_embedding(text, tokenizer, model, max_length=512):
     
     # Move the tokenized input to the GPU if available
     if torch.cuda.is_available():
-        for key, value in inputs.items():
-            inputs[key] = value.to('cuda')
+        inputs = {key: value.to('cuda') for key, value in inputs.items()}
     
     # Get the embeddings
     with torch.no_grad():
@@ -37,6 +36,9 @@ def get_embedding(text, tokenizer, model, max_length=512):
     
     # Move the embeddings to CPU for further operations
     embeddings = embeddings.cpu().numpy()
+
+    return embeddings  # Added this line to return the embeddings
+
 
 
 
