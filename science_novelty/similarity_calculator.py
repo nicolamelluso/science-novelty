@@ -15,12 +15,28 @@ except ImportError:
 CHUNK_SIZE = 1000  # Adjust based on memory availability
 N_JOBS = -1  # Use all available cores
 
-def load_vectors_for_year(year, path_vectors):
+def load_vectors_for_year(year, input_dir):
+    """Load vectors for a specific year using efficient reading."""
+    
+    file_path = os.path.join(input_dir, f"{year}_vectors.csv")
+    
+    if not os.path.exists(file_path):
+        return None, None
+    
     print(f'Reading {year}...')
-    file_path = os.path.join(path_vectors, f"{year}_vectors.csv")
-    data = xp.loadtxt(file_path, delimiter='\t', dtype=np.float32)
-    papers_ids = data[:, 0].astype(xp.int64)
-    vectors = data[:, 1:]
+    # Load the entire CSV into a single numpy array
+    data = xp.loadtxt(file_path, delimiter=',', dtype=np.float32, skiprows = 1)
+    
+    # Check if there is only one paper in the year
+    if len(data) == 769:
+        papers_ids = [data[0].astype(xp.int64)]
+        vectors = [data[1:]]
+        
+    else:
+        # Slice the array to get the desired columns
+        papers_ids = data[:, 0].astype(xp.int64)  # Assuming the first column is the PaperId
+        vectors = data[:, 1:]  # Assuming the rest of the columns are the vectors
+
     return papers_ids, vectors
 
 def calculate_similarity_for_chunk(chunk, prior_data):
@@ -43,7 +59,7 @@ def calculate_avg_max_similarity(current_data, prior_data):
 def initialize_output_file(output_path):
     with open(output_path, 'w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
-        writer.writerow(['PaperId', 'cosine_max', 'cosine_avg'])
+        writer.writerow(['PaperId', 'max_similarity', 'avg_similarity'])
 
 def save_to_csv(papers_ids, avg_similarities, max_similarities, output_path):
     with open(output_path, 'a', newline='', encoding='utf-8') as file:
@@ -59,6 +75,10 @@ def calculate_similarities(start_year, end_year, input_dir, output_dir):
 
     for year in tqdm(years):
         papers_ids, current_year_data = load_vectors_for_year(year, input_dir)
+    
+        if current_year_data is None:
+            continue
+
         rolling_data.append((year, current_year_data))
         rolling_data = [(y, data) for y, data in rolling_data if year - y < 6]
 
