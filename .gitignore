@@ -1,0 +1,11 @@
+# Ignore .log files
+*.log
+*.ipynb_checkpoints
+
+# Ignore the bin directory
+/data/metrics/new_bigram.csv
+/data/metrics/papers_cosine.csv
+
+# Ignore all .md files except README.md
+*.md
+!README.md
