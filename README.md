@@ -11,7 +11,7 @@ This repository is dedicated to the assessement of novelty and its impact of sci
 
 - **Reproduce Results**:
 - - Replicate the findings of the original paper, which analyzes data from the Microsoft Academic Graph (MAG), now OpenAlex, encompassing a comprehensive collection of papers from 1800 to 2020. The data can be accessed here: https://zenodo.org/record/8283353.
-- **Custom Analysis**
+- **Custom Analysis**:
 - - Enable users to apply the analysis, including preprocessing and metrics calculation, to a tailored set of papers for individual research needs.
 
 ![Science Novelty Schema](https://github.com/nicolamelluso/science-novelty/blob/main/data/ScienceNovelty-schema.png)
