@@ -31,17 +31,17 @@ Each segment is integral for extracting text-based metrics to measure the novelt
 ### Notebooks
 The repository contains scripts and detailed Jupyter notebooks that guide users through each step of the process. The notebooks are particularly beneficial for those aiming to execute specific tasks or a subset of the entire process.
 
-- **`0.tutorial`**: A comprehensive guide that offers a step-by-step walkthrough of all phases, serving as an introductory overview.
+- `0.tutorial`**: A comprehensive guide that offers a step-by-step walkthrough of all phases, serving as an introductory overview.
 - **`data-collection`**: Instructions for downloading a custom set of papers from OpenAlex or searching within the Zenodo repository.
 - **`preprocessing`**: A guide for preprocessing titles and abstracts (and full texts, if available) of a selected set of papers.
 - **`text-embeddings`** and 4.cosine-distance`**: Notebooks for generating text embeddings and calculating cosine similarity.
 - **`new-word`**, **`6.new-bigram`**, **`7.new-trigram`**, **`8.new-word-comb`**: Detailed guides for identifying new lexical elements and combinations in processed papers.
 
 This repository is mainly useful for users that want to perform their own subset of tasks. Scripts are available for different usages. For example:
-- If some wants to download a custom set papers from OpenAlex or search within the Zenodo repository of the corresponding paper of this repository can follow the instructions from the notebook **1.data-collection**
-- If some wants to preprocess the title and abstract (and the full text if available) from a custom set of papers following the procedure described in the corresponding paper of this repository can use the notebook **2.preprocessing**
-- If some wants to get the embeddings of a custom set papers and then calculate their cosine similarity can follow the notebooks **3.text-embeddings** and **3.cosine-distance**
-- Is some wants to identify new words, new bigrams, new trigrams and new word combs from a custom set of processed papers can use the notebooks **5.new-word**, **6.new-bigram**, **7.new-trigram** and **5.new-word-comb**.
+- If some wants to download a custom set papers from OpenAlex or search within the Zenodo repository of the corresponding paper of this repository can follow the instructions from the notebook **`1.data-collection`**
+- If some wants to preprocess the title and abstract (and the full text if available) from a custom set of papers following the procedure described in the corresponding paper of this repository can use the notebook **`2.preprocessing`**
+- If some wants to get the embeddings of a custom set papers and then calculate their cosine similarity can follow the notebooks **`3.text-embeddings`** and **`3.cosine-distance`**
+- Is some wants to identify new words, new bigrams, new trigrams and new word combs from a custom set of processed papers can use the notebooks **`5.new-word`**, **`6.new-bigram`**, **`7.new-trigram`** and **`5.new-word-comb`**.
 
 ### Custom Analysis
 Users are encouraged to adapt the code for their specific research needs, ensuring a flexible and customizable approach to analyzing scientific novelty and impact.
