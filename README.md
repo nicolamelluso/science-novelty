@@ -32,10 +32,10 @@ Each segment is integral for extracting text-based metrics to measure the novelt
 The repository contains scripts and detailed Jupyter notebooks that guide users through each step of the process. The notebooks are particularly beneficial for those aiming to execute specific tasks or a subset of the entire process.
 
 - **`0.tutorial`**: A comprehensive guide that offers a step-by-step walkthrough of all phases, serving as an introductory overview.
-- **`data-collection`**: Instructions for downloading a custom set of papers from OpenAlex or searching within the Zenodo repository.
-- **`preprocessing`**: A guide for preprocessing titles and abstracts (and full texts, if available) of a selected set of papers.
-- **`text-embeddings`** and 4.cosine-distance`**: Notebooks for generating text embeddings and calculating cosine similarity.
-- **`new-word`**, **`6.new-bigram`**, **`7.new-trigram`**, **`8.new-word-comb`**: Detailed guides for identifying new lexical elements and combinations in processed papers.
+- **`1.data-collection`**: Instructions for downloading a custom set of papers from OpenAlex or searching within the Zenodo repository.
+- **`2.preprocessing`**: A guide for preprocessing titles and abstracts (and full texts, if available) of a selected set of papers.
+- **`3.text-embeddings`** and **`4.cosine-distance`**: Notebooks for generating text embeddings and calculating cosine similarity.
+- **`5.new-word`**, **`6.new-bigram`**, **`7.new-trigram`**, **`8.new-word-comb`**: Detailed guides for identifying new lexical elements and combinations in processed papers.
 
 This repository is mainly useful for users that want to perform their own subset of tasks. Scripts are available for different usages. For example:
 - If some wants to download a custom set papers from OpenAlex or search within the Zenodo repository of the corresponding paper of this repository can follow the instructions from the notebook **`1.data-collection`**
