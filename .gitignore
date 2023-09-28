@@ -1,6 +1,6 @@
 # Ignore .log files
 *.log
-*/.ipynb_checkpoints
+*.ipynb_checkpoints
 
 # Ignore the bin directory
 /.ipynb_checkpoints
