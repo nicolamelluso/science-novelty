@@ -59,7 +59,7 @@ def process_embeddings(input_file, output_dir, storage='csv', chunk_size=50):
 
 def save_vectors(year, vectors, output_dir, storage):
     if storage == 'csv':
-        with open(f'{output_dir}/{year}_vectors.csv', 'w', encoding='utf-8', newline='') as writer:
+        with open(f'{output_dir}/{year}_vectors.csv', 'w', encoding='utf-8', newline='\n') as writer:
             csv_writer = csv.writer(writer, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             csv_writer.writerow(["PaperID"] + list(range(0, 768)))
             csv_writer.writerows(vectors)
