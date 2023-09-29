@@ -3,7 +3,7 @@
 ## Citation
 
 If you use the code from this repository, please cite the following paper: 
- > *Arts S., Melluso N., Veugelers R. (2023). Beyond Citations: Text-Based Metrics for Assessing Novelty and its Impact in Scientific Publications*
+ > *Arts S., Melluso N., Veugelers R. (2023). Beyond Citations: Text-Based Metrics for Assessing Novelty and its Impact in Scientific Publications. https://doi.org/10.48550/arXiv.2309.16437*
 
 ## Overview
 
