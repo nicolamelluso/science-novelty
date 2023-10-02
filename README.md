@@ -37,11 +37,10 @@ The repository contains scripts and detailed Jupyter notebooks that guide users 
 - **`1.data-collection`**: Instructions for downloading a custom set of papers from OpenAlex or searching within the Zenodo repository.
 - **`2.preprocessing`**: A guide for preprocessing titles and abstracts (and full texts, if available) of a selected set of papers.
 - **`3.text-embeddings`** and **`4.cosine-distance`**: Notebooks for generating text embeddings and calculating cosine similarity.
-- **`5.new-word`**, **`6.new-bigram`**, **`7.new-trigram`**, **`8.new-word-comb`**: Detailed guides for identifying new lexical elements and combinations in processed papers.
+- **`5.new-word`**, **`6.new-bigram`**, **`7.new-trigram`**, **`8.new-word-comb`**: Detailed guides for identifying new ngrams and new word combinations combinations in processed papers.
 
 ### Custom Analysis
 Users are encouraged to adapt the code for their specific research needs, ensuring a flexible and customizable approach to analyzing scientific novelty and impact.
-To this end the notebooks are organized as follow:
 
 ## Contribution & Feedback
 Contributions to enhance the code and extend its functionalities are warmly welcomed. For any inquiries, issues, or feedback, feel free to open an issue or contact us directly at nicola.melluso@kuleuven.be.
