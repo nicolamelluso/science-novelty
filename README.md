@@ -10,7 +10,7 @@ If you use the code from this repository, please cite the following paper:
 This repository is dedicated to the assessement of novelty and its impact of scientific publications, employing Python scripts and Jupyter notebooks. It is designed with a dual purpose:
 
 - **Reproduce Results**:
-  - Replicate the findings of the original paper, which analyzes data from the Microsoft Academic Graph (MAG), now OpenAlex, encompassing a comprehensive collection of papers from 1800 to 2020. The data can be accessed here: https://zenodo.org/record/8283353.
+  - Replicate the findings of the original paper, which analyzes data from OpenAlex, encompassing a comprehensive collection of papers from 1666 to 2023. The data can be accessed here: https://zenodo.org/record/8283353.
 - **Custom Analysis**:
   - Enable users to apply the analysis, including preprocessing and metrics calculation, to a tailored set of papers for individual research needs.
 
@@ -20,11 +20,11 @@ The methodology is systematically organized into the following segments:
 1. **Data Collection**
 2. **Preprocessing**
 3. **Text Embeddings**
-4. **Cosine Distance**
-5. **New Word**
-6. **New Bigrams**
-7. **New Trigrams**
-8. **New Word Combinations**
+4. **Semantic Distance**
+5. **New Words**
+6. **New Phrases**
+7. **New Word Combinations**
+8. **New Phrase Combinations**
 
 Each segment is integral for extracting text-based metrics to measure the novelty and its impact of scientific publications.
 
@@ -36,8 +36,8 @@ The repository contains scripts and detailed Jupyter notebooks that guide users 
 - **`0.tutorial`**: A comprehensive guide that offers a step-by-step walkthrough of all phases, serving as an introductory overview.
 - **`1.data-collection`**: Instructions for downloading a custom set of papers from OpenAlex or searching within the Zenodo repository.
 - **`2.preprocessing`**: A guide for preprocessing titles and abstracts (and full texts, if available) of a selected set of papers.
-- **`3.text-embeddings`** and **`4.cosine-distance`**: Notebooks for generating text embeddings and calculating cosine similarity.
-- **`5.new-word`**, **`6.new-bigram`**, **`7.new-trigram`**, **`8.new-word-comb`**: Detailed guides for identifying new ngrams and new word combinations combinations in processed papers.
+- **`3.text-embeddings`** and **`4.cosine-distance`**: Notebooks for generating text embeddings and calculating semantic distance using SPECTER.
+- **`5.new-word`**, **`6.new-phrase`**, **`7.new-word-comb`**, **`8.new-phrase-comb`**: Detailed guides for identifying new words, new phrases, new word combinations and new phrase combinations in processed papers.
 
 ### Custom Analysis
 Users are encouraged to adapt the code for their specific research needs, ensuring a flexible and customizable approach to analyzing scientific novelty and impact.
