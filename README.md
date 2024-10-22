@@ -10,7 +10,7 @@ If you use the code from this repository, please cite the following paper:
 This repository is dedicated to the assessement of novelty and its impact of scientific publications, employing Python scripts and Jupyter notebooks. It is designed with a dual purpose:
 
 - **Reproduce Results**:
-  - Replicate the findings of the original paper, which analyzes data from OpenAlex, encompassing a comprehensive collection of papers from 1666 to 2023. The data can be accessed here: [10.5281/zenodo.8283352](https://10.5281/zenodo.8283352).
+  - Replicate the findings of the original paper, which analyzes data from OpenAlex, encompassing a comprehensive collection of papers from 1666 to 2023. The data can be accessed here: [https://doi.org/10.5281/zenodo.8283352](https://doi.org/10.5281/zenodo.8283352).
 - **Custom Analysis**:
   - Enable users to apply the analysis, including preprocessing and metrics calculation, to a tailored set of papers for individual research needs.
 
