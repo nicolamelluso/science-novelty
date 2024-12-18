@@ -3,7 +3,7 @@
 ## Citation
 
 If you use the code from this repository, please cite the following paper: 
- > *Arts S., Melluso N., Veugelers R. (2023). Beyond Citations: Measuring Novel Scientific Ideas and their Impact in Publication Text. https://doi.org/10.48550/arXiv.2309.16437*
+ > *Arts S., Melluso N., Veugelers R. (2025). Beyond Citations: Measuring Novel Scientific Ideas and their Impact in Publication Text. Forthcoming at the _Review of Economics and Statistics_. Preprint available at: https://doi.org/10.48550/arXiv.2309.16437*
 
 ## Overview
 
