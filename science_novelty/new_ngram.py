@@ -38,7 +38,7 @@ def calculate_new_ngrams(baseline_year: int, raw_papers_path: str, processed_pap
     
     def new_ngram_counter() -> Dict[str, Tuple[int, int]]:
         """
-        Calculate new ngrams (words, bigrams or trigrams) that are not in the baseline.
+        Calculate new ngrams (words or phrases) that are not in the baseline.
         
         Returns:
         - A dictionary where keys are new ngrams, and values are tuples containing the paper ID where the word first appeared
