@@ -19,7 +19,7 @@ This repository is dedicated to the computation of text-based metrics of novelty
 
 ## Quick Showcase
 
-One of the primary and useful application of this repository is the pre-processing of text. Given a raw text, using the script `preprocessing.py` it is possible to get the cleaned words and noun phrases. This "processed" output can be used as input to measure the novelty of a paper or to trace the reuse of the constituent words or noun phrases. The `preprocessing.py` script strictly follows the procedure described in our [Zenodo](https://doi.org/10.5281/zenodo.8283352) repository, including stopwords posted in the repository. The `preprocessing.py` script can be improved. If you have any feedback please contact me [nicolamelluso@gmail.com](nicolamelluso@gmail.com).
+One of the primary and useful application of this repository is the pre-processing of text. Given a raw text, using the script `preprocessing.py` it is possible to get the cleaned words and noun phrases. This "processed" output can be used as input to measure the novelty of a paper or to trace the reuse of the constituent words or noun phrases. The `preprocessing.py` script strictly follows the procedure described in our [Zenodo](https://doi.org/10.5281/zenodo.8283352) repository, including stopwords posted in the repository. The `preprocessing.py` script can be improved. If you have any feedback please contact [nicolamelluso@gmail.com](nicolamelluso@gmail.com).
 
 This is a simple illustration on how to use the processing code:
 
