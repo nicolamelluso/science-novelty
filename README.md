@@ -7,7 +7,7 @@ If you use the code from this repository, please cite the following paper:
 
 ## Overview
 
-This repository is dedicated to the assessement of novelty and its impact of scientific publications, employing Python scripts and Jupyter notebooks. It is designed with a dual purpose:
+This repository is dedicated to the computation of text-based metrics of novelty and its impact from scientific publications. It is designed with a dual purpose:
 
 - **Reproduce Results**:
   - Replicate the findings of the original paper, which analyzes data from OpenAlex, encompassing a comprehensive collection of papers from 1666 to 2023. The data can be accessed here: [https://doi.org/10.5281/zenodo.8283352](https://doi.org/10.5281/zenodo.8283352).
@@ -17,7 +17,7 @@ This repository is dedicated to the assessement of novelty and its impact of sci
 ![Science Novelty Schema](https://github.com/nicolamelluso/science-novelty/blob/main/data/ScienceNovelty-schema.png)
  
 
-## Quick Tutorial
+## Quick Showcase
 
 One of the primary and useful application of this repository is the pre-processing of text. Given a raw text, using the script `preprocessing.py` it is possible to get the cleaned words and noun phrases. This "processed" output can be used as input to measure the novelty of a paper or to trace the reuse of the constituent words or noun phrases. The `preprocessing.py` script strictly follows the procedure described in our [Zenodo](https://doi.org/10.5281/zenodo.8283352) repository, including stopwords posted in the repository. The `preprocessing.py` script can be improved. If you have any feedback please contact me [nicolamelluso@gmail.com](nicolamelluso@gmail.com).
 
@@ -48,13 +48,13 @@ Processed Phrases: ['specific enzymatic amplification', 'dna', 'polymerase chain
 ```
 
 ## Preliminary tips for reproducibility
-This repository demonstrates how to compute the metrics described in the associated paper. It is important to note that the original computations were executed on a server with approximately 500GB of RAM. Running the code as-is on less powerful machines is not recommended. Instead, we suggest optimizing the code to enable parallelized executions for better efficiency.
+This repository shows how to compute the metrics described in the associated paper (forthcoming at _RESTat_). It is important to note that the original computations were executed on a server with approximately 500GB of RAM. Running the code as-is on less powerful machines is not recommended. Instead, we suggest optimizing the code to enable parallelized executions for better efficiency.
 
 The primary goal of this repository is to illustrate the conceptual framework behind each metric rather than provide highly optimized, production-ready implementations. To achieve better reproducibility and scalability, we recommend utilizing more advanced computational resources. For example:
 
 - Google BigQuery: Ideal for computing text-based metrics efficiently at scale.
 - ChromaDB: Suitable for handling operations involving embeddings.
-- 
+  
 We welcome any feedback or suggestions for improving the code to enhance its reproducibility and usability. If you have ideas for integrating optimized Google BigQuery queries or other techniques that streamline the identification and calculation of the metrics, please let us know.
 
 For assistance or suggestions, feel free to contact Nicola Melluso at [nicolamelluso@gmail.com](nicolamelluso@gmail.com).
@@ -94,5 +94,5 @@ Users are encouraged to adapt the code for their specific research needs, ensuri
 Contributions to enhance the code and extend its functionalities are warmly welcomed. For any inquiries, issues, or feedback, feel free to open an issue or contact us directly at nicola.melluso@kuleuven.be.
 Part of this code is inspired from `https://github.com/sam-arts/respol_patents_code`
 
-## Respect Copyrights
+## Copyrights
 Users are reminded to adhere to copyright regulations and ethical guidelines when utilizing and adapting the provided resources and data.
