@@ -19,7 +19,7 @@ This repository is dedicated to the computation of text-based metrics of novelty
 
 ## Quick Showcase
 
-One of the primary and useful application of this repository is the pre-processing of text. Given a raw text, using the script `preprocessing.py` it is possible to get the cleaned words and noun phrases. This "processed" output can be used as input to measure the novelty of a paper or to trace the reuse of the constituent words or noun phrases. The `preprocessing.py` script strictly follows the procedure described in our [Zenodo](https://doi.org/10.5281/zenodo.8283352) repository, including stopwords posted in the repository. The `preprocessing.py` script can be improved. If you have any feedback please contact [nicolamelluso@gmail.com](nicolamelluso@gmail.com).
+One of the primary and useful application of this repository is the pre-processing of text. Given a raw text, using the script `preprocessing.py` it is possible to get the cleaned words and noun phrases. This "processed" output can be used as input to measure the novelty of a paper or to trace the reuse of the constituent words or noun phrases. The `preprocessing.py` script strictly follows the procedure described in our [Zenodo](https://doi.org/10.5281/zenodo.8283352) repository, including stopwords posted in the repository. The `preprocessing.py` script can be improved. If you have any feedback please contact Nicola Melluso ([nicolamelluso@gmail.com](nicolamelluso@gmail.com) | [nicola.melluso@gmail.com](nicola.melluso@kuleuven.com)).
 
 This is a simple illustration on how to use the processing code:
 
@@ -57,7 +57,7 @@ The primary goal of this repository is to illustrate the conceptual framework be
   
 We welcome any feedback or suggestions for improving the code to enhance its reproducibility and usability. If you have ideas for integrating optimized Google BigQuery queries or other techniques that streamline the identification and calculation of the metrics, please let us know.
 
-For assistance or suggestions, feel free to contact Nicola Melluso at [nicolamelluso@gmail.com](nicolamelluso@gmail.com).
+For assistance or suggestions, feel free to contact Nicola Melluso ([nicolamelluso@gmail.com](nicolamelluso@gmail.com) | [nicola.melluso@gmail.com](nicola.melluso@kuleuven.com)).
 
 ## Structure
 
@@ -87,11 +87,8 @@ The repository contains scripts and detailed Jupyter notebooks that guide users 
 ### Improvements
 This repository is optmized to be run on a Server with high computational capabilities (about 500GB of RAM). Cloud services can be used to optimize the whole process. BigQuery is the most valid alternative. ChromaDB is also a valid alternative to store and query embedding data.
 
-### Custom Analysis
-Users are encouraged to adapt the code for their specific research needs, ensuring a flexible and customizable approach to analyzing scientific novelty and impact.
-
 ## Contribution & Feedback
-Contributions to enhance the code and extend its functionalities are warmly welcomed. For any inquiries, issues, or feedback, feel free to open an issue or contact us directly at nicola.melluso@kuleuven.be.
+Contributions to enhance the code and extend its functionalities are warmly welcomed. For any questions, issues, or feedback, feel free to open an issue or contact us directly at nicola.melluso@kuleuven.be.
 Part of this code is inspired from `https://github.com/sam-arts/respol_patents_code`
 
 ## Copyrights
