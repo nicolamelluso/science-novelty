@@ -503,7 +503,7 @@ def process_text(text: str, chunk: str) -> str:
         try:
             return extract_noun_phrases(doc)
         except Exception:
-            return no.nan
+            return np.nan
 
 
 def plain_text_from_inverted(inverted_index):
