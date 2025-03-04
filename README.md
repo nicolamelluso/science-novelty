@@ -19,7 +19,7 @@ This repository is dedicated to the computation of text-based metrics of novelty
 
 ## Quick Showcase
 
-One of the primary and useful application of this repository is the pre-processing of text. Given a raw text, using the script `preprocessing.py` it is possible to get the cleaned words and noun phrases. This "processed" output can be used as input to measure the novelty of a paper or to trace the reuse of the constituent words or noun phrases. The `preprocessing.py` script strictly follows the procedure described in our [Zenodo](https://doi.org/10.5281/zenodo.8283352) repository, including stopwords posted in the repository. The `preprocessing.py` script can be improved. If you have any feedback please contact Nicola Melluso ([nicolamelluso@gmail.com](nicolamelluso@gmail.com) | [nicola.melluso@gmail.com](nicola.melluso@kuleuven.com)).
+One of the primary and useful application of this repository is the pre-processing of text. Given a raw text, using the script `preprocessing.py` it is possible to get the cleaned words and noun phrases. This "processed" output can be used as input to measure the novelty of a paper or to trace the reuse of the constituent words or noun phrases. The `preprocessing.py` script strictly follows the procedure described in our [Zenodo](https://doi.org/10.5281/zenodo.8283352) repository, including stopwords posted in the repository. The `preprocessing.py` script can be improved. If you have any feedback please contact Nicola Melluso ([nicolamelluso@gmail.com](nicolamelluso@gmail.com) | [nicola.melluso@kuleuven.com](nicola.melluso@kuleuven.com)).
 
 This is a simple illustration on how to use the processing code:
 
@@ -57,7 +57,7 @@ The primary goal of this repository is to illustrate the conceptual framework be
   
 We welcome any feedback or suggestions for improving the code to enhance its reproducibility and usability. If you have ideas for integrating optimized Google BigQuery queries or other techniques that streamline the identification and calculation of the metrics, please let us know.
 
-For assistance or suggestions, feel free to contact Nicola Melluso ([nicolamelluso@gmail.com](nicolamelluso@gmail.com) | [nicola.melluso@gmail.com](nicola.melluso@kuleuven.com)).
+For assistance or suggestions, feel free to contact Nicola Melluso ([nicolamelluso@gmail.com](nicolamelluso@gmail.com) | [nicola.melluso@kuleuven.com](nicola.melluso@kuleuven.com)).
 
 ## Structure
 
